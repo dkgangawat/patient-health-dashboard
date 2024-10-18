@@ -5,7 +5,14 @@
 This project is a full-stack application for healthcare providers to view and manage patient health data, focusing on prior authorization workflows. It includes a patient dashboard, health data integration, and APIs for submitting and managing prior authorization requests.
 
 live demo [https://patient-health-dashboard-virid.vercel.app/](https://patient-health-dashboard-virid.vercel.app/)
-![Watch the video](/demo.mp4)
+
+## Demo
+
+<video width="600" controls>
+  <source src="demo.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
 
 ## Prerequisites
 
