@@ -16,7 +16,7 @@ app.use(express.urlencoded({ extended: true }))
 app.use(morgan('combined'));
 app.use(cors(
     {
-        origin: ['*'],
+        origin: ['http://localhost:3000','https://patient-health-dashboard-virid.vercel.app'],
         credentials: true
     }
 ));
