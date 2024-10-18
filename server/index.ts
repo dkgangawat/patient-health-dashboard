@@ -16,7 +16,7 @@ app.use(express.urlencoded({ extended: true }))
 app.use(morgan('combined'));
 app.use(cors(
     {
-        origin: ['http://localhost:3000','https://scm-delta.vercel.app', 'https://vendor-audit.vercel.app/'],
+        origin: ['*'],
         credentials: true
     }
 ));
