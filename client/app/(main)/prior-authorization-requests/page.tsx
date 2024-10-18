@@ -66,7 +66,7 @@ export default function ListRequests() {
 
   return (
     <div className="container mx-auto p-4">
-      <div className=' flex justify-between'>
+      <div className=' flex justify-between flex-col md:flex-row'>
         <h1 className="text-2xl font-bold mb-4">Prior Authorization Requests</h1>
         <Input
           type="text"

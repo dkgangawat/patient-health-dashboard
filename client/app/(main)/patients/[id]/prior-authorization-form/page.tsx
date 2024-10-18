@@ -159,7 +159,7 @@ export default function PreAuthForm({ params }: { params: { id: string } }) {
         <div className="grid md:grid-cols-3 gap-4">
           <div>
             <Label htmlFor="expectedStay">Expected no. of days stay in hospital</Label>
-            <Input required id="expectedStay" type="number" placeholder="Days" value={formData.expectedStay} onChange={handleChange} />
+            <Input required id="expectedStay" min={0} type="number" placeholder="Days" value={formData.expectedStay} onChange={handleChange} />
             {formErrors.expectedStay && <p className="text-red-500 text-xs italic">{formErrors.expectedStay}</p>}
           </div>
           <div>
@@ -178,7 +178,7 @@ export default function PreAuthForm({ params }: { params: { id: string } }) {
           </div>
           <div>
             <Label htmlFor="icuDays">Days in ICU</Label>
-            <Input required id="icuDays" type="number" placeholder="Days" value={formData.icuDays} onChange={handleChange} />
+            <Input required id="icuDays" type="number" min={0} placeholder="Days" value={formData.icuDays} onChange={handleChange} />
             {formErrors.icuDays && <p className="text-red-500 text-xs italic">{formErrors.icuDays}</p>}
           </div>
         </div>

@@ -2,6 +2,7 @@
 import { useState, useEffect, ChangeEvent, FormEvent, useCallback } from 'react';
 import { useQuery } from '@tanstack/react-query';
 import axiosClient from '@/lib/axiosClient';
+import { useRouter } from 'next/navigation';
 
 interface FormData {
   patientId: string;
@@ -64,6 +65,7 @@ const usePreAuthForm = (id: string) => {
 
   const [formErrors, setFormErrors] = useState<FormErrors>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const router = useRouter()
 
   const { data: userData, isLoading, error } = useQuery({
     queryKey: ['patient', id],
@@ -130,6 +132,7 @@ const usePreAuthForm = (id: string) => {
       setIsSubmitting(true);
       await axiosClient.post('/api/prior-authorization-form/add-request', formData);
       console.log('Form submitted successfully:', formData);
+      router.push('/prior-authorization-requests');
       alert('Form submitted successfully');
     } catch (error) {
       console.error('Error submitting form:', error);

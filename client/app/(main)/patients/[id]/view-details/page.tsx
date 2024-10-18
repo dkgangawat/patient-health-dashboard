@@ -124,12 +124,12 @@ export default function HealthDashboard({params}:{
               </CardContent>
             </Card>
           </div>
-          <Card className="mt-4 overflow-x-scroll">
+          <Card className="mt-4">
             <CardHeader>
               <CardTitle>Blood Pressure Trend</CardTitle>
               <CardDescription>6-month history</CardDescription>
             </CardHeader>
-            <CardContent>
+            <CardContent className=' w-[80vw] overflow-x-scroll'>
               <ChartContainer
                 config={{
                   systolic: {
